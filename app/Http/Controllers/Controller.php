@@ -26,7 +26,7 @@ class Controller extends BaseController
         ]);
     }
 
-    public function helllo(Request $req)
+    public function hello()
     {
         return response()->json([
             'message' => 'hey'

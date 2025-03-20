@@ -90,8 +90,15 @@ Route::post('/add_ticket', [Fetching_Controller::class, 'add_ticket'])->middlewa
 // Route::post('/refresh', [Controller::class, 'refresh'])->middleware('jwt.verify');
 // Route::post('/login',[Controller::class,'login']);
 // Route::post('/logout',[Controller::class,'logout'])->middleware('jwt.verify');
-Route::get('/me',[Controller::class,'me']);
+// Route::get('/me',[Controller::class,'me']);
+// Route::get('/hello',[Controller::class,'hello']);
 
+
+Route::get('/hello', function () {
+    return response()->json([
+        'message'=>'hello laravel'
+    ]);
+});
 
 // Route::get('/again',function()
 // {
