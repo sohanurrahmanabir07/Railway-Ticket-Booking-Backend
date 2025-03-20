@@ -100,6 +100,10 @@ Route::get('/hello', function () {
     ]);
 });
 
+Route::get('/debug-log', function () {
+    return response()->json(['log' => file_get_contents(storage_path('logs/laravel.log'))]);
+});
+
 // Route::get('/again',function()
 // {
     
